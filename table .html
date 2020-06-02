@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body{
+height:1000px;
+}
+#logo{
+width:150px;
+float:right;
+padding:20px;
+
+}
+div.one{
+height:150px;
+margin-bottom:10px;
+background-image: url("sport.jpg")
+}
+
+ul {
+  list-style-type: none;
+  margin: -8px 0px 0 ;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 1);
+  width:100%;
+}
+
+li {
+float:right;
+}
+
+li a, .drop {
+display: inline-block;
+padding:15px;
+text-decoration:none;
+color:white;
+padding: 18px 60px 18px 60px ;
+text-align: center;
+}
+
+li a:hover, .bar:hover .drop {
+background-color: rgba(255, 255, 255, 1);
+color:black;
+}
+
+li.bar {
+  display: inline-block;
+}
+
+.details {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 148px;
+  z-index: 1;
+
+}
+
+.details a {
+  color: black;
+  padding: 18px 23px 18px 23px ;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.details a:hover {
+background-color: black;
+color:white;
+}
+
+.bar:hover .details {
+  display: block;
+}
+.main {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+div.today{
+  margin:12px 7px 0 0px;
+  background-color:#DDD;
+  height:565px;
+  border:1px solid rgba(72, 49, 255, 0.4);
+}
+.table1{
+float:right;
+margin:0px 0 0 0;
+}
+table{
+width:100%;
+direction:rtl;
+border-collapse: collapse;
+
+}
+th,td{
+border: 1px solid rgb(180, 180, 180);
+padding:10px;
+text-align:center;
+}
+th{
+background-color:black;
+color:white;
+}
+.ahly{
+height:15px;
+width:15px;
+}
+a{
+text-decoration:none;
+color:black;
+}
+tr:hover {background-color: #DDD;}
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-13{width: 22%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px){
+[class*="col-"] {
+  width: 100%;
+ float:none;
+}
+div.today{
+margin:35px 0 30px; 0;
+height:220px;
+}
+li,.details{width: 100%;float:none;text-align:center;}
+.del{display:none;}
+}
+
+</style>
+</head>
+<body>
+<div class="one">
+<a target="_self" href="main_page.html">
+<img id="logo" src="logo1.png" alt="logo">
+</a>
+</div>
+<ul>
+  <li><a href="main_page.html" class="main">الرئيسية</a></li>
+  <li class="bar">
+    <a class="drop">الدوريات</a>
+    <div class="details">
+      <a target="_blank" href="table .html">ترتيب الدورى المصرى</a>
+    </div>
+  </li>
+</ul>
+<div>
+<div class="col-9 table1">
+<h1 style="text-align:center;">ترتيب الدورى المصرى</h1>
+    <div style="background-color:#DDD;">
+    <table>
+    <tr>
+    <th>الترتيب</th>
+	<th colspan="4">الفريق</th>
+    <th>لعب</th>
+    <th>فوز</th>
+    <th>تعادل</th>
+    <th>خسارة</th>
+    <th class="del">له</th>
+    <th class="del">عليه</th>
+    <th class="del">الفرق</th>
+    <th>النقاط</th>
+    </tr>
+    <tr>
+    <td><b>1</b></td>
+    <td colspan="4">
+    <b>
+    الأهلي
+    </a>
+    </b>
+    </td>
+    <td>17</td>
+    <td>16</td>
+    <td>1</td>
+    <td>0</td>
+    <td class="del">46</td>
+    <td class="del">4</td>
+    <td class="del">+42</td>
+    <td>49</td>
+    </tr>
+    <tr>
+    <td><b>2</b></td>
+    <td colspan="4">
+    <b>
+     المقاولون العرب
+    </b>
+    </td>
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>33</td>
+    </tr>
+    <tr>
+    <td><b>3</b></td>
+
+    <td colspan="4">
+     <b>
+     بيراميدز
+    </b>
+    </td>
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>32</td>
+    </tr>
+    <tr>
+    <td><b>4</b></td>
+    <td colspan="4">
+    <b>
+    الزمالك
+    </b>
+    </td>
+
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>31</td>
+    </tr>
+    <tr>
+    <td><b>5</b></td>
+    <td colspan="4">
+    <b>
+    الاتحاد السكندرى
+    </b>
+    </td>
+
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>27</td>
+    </tr>
+    <tr>
+    <td><b>6</b></td>
+    <td colspan="4">
+    <b>
+	سموحة
+    </b>
+    </td>
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>25</td>
+    </tr>
+    <tr>
+    <td><b>7</b></td>
+    <td colspan="4">
+    <b>
+	انبى
+    </b>
+    </td>
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>25</td>
+    </tr>
+    <tr>
+    <td><b>8</b></td>
+    <td colspan="4">
+    <b>
+	الانتاج الحربي
+    </b>
+    </td>
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>23</td>
+    </tr>
+    <tr>
+    <td><b>9</b></td>
+    <td colspan="4">
+    <b>
+	المصري
+    </b>
+    </td>
+    <td>18</td>
+    <td>10</td>
+    <td>3</td>
+    <td>5</td>
+    <td class="del">22</td>
+    <td class="del">15</td>
+    <td class="del">+7</td>
+    <td>20</td>
+    </tr>
+</table>
+</div>
+</div>
+<div class="col-13 today" >
+<h2 style="color:blue;text-align:center;margin:10px;padding:5px;border:1px solid rgba(72, 49, 255, 0.4);">أهم مباريات اليوم</h2>
+<p style="color:blue;text-align:center;font-size:20px;">عفوا لاتوجد مبارايات هامة اليوم<p>
+</div>
+</div>
+</body>
+</html>

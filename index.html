@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" nonce="b7421cc7239c4735aca41179938" src="//local.adguard.org?ts=1590760726727&amp;type=content-script&amp;dmn=cdn.fbsbx.com&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1"></script>
+<script type="text/javascript" nonce="b7421cc7239c4735aca41179938" src="//local.adguard.org?ts=1590760726727&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script>
+
+function validate () { 
+
+var password = document.myform.pass.value;
+if (password[0] == password[0].toLowerCase()){
+        alert('كلمة المرور يجب ان تبدأ بحرف كبير');
+	return false;
+}
+var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/;
+if(!password.match(decimal)){
+	alert("يجب ان تتبع ارشادات كلمة المرور");
+	return false;}
+var email = document.myform.email.value;
+if(!email.match(/[A-Za-z1-9]+@[A-Za-z1-9]+.[A-Za-z1-9]/)){
+	alert("only letters or space allowed in named field");
+	return false;}
+	alert("أهلا بك فى الموقع")
+return true;	
+} 
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#logo{
+width:150px;
+float:right;
+padding:20px;
+
+}
+div.one{
+height:150px;
+margin-bottom:10px;
+background-image: url("sport.jpg")
+}
+fieldset{
+background-color:rgb(240, 240, 240);
+padding:20px;
+float:left;
+margin:70px 150px 50px;
+
+}
+input{
+padding:5px;
+float:right;
+}
+
+label{
+font-size:20px;
+color:rgb(60, 60, 60);
+float:right;
+}
+span{float:right;}
+
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-13{width: 22%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+@media only screen and (max-width:768px){
+[class*="col-"] {
+  width: 100%;
+  margin:10px 0px 10px;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="one">
+<a target="_self" href="index.html">
+<img id="logo" src="logo1.png" alt="logo">
+</a>
+</div>
+
+<form name="myform" action="main_page.html" onsubmit="return validate()">
+  <fieldset class="col-9 fild">
+    <label for="fname">:الاسم الأول</label><br><br>
+    <input type="text" id="fname" name="fname" required><br><br>
+    <label for="lname">:الاسم الأخير</label><br><br>
+    <input type="text" id="lname" name="lname" required><br><br>
+	<label for="email">:البريد الإلكترونى</label><br><br>
+    <input type="email" id="email" name="email" required><br><br>
+	<label for="pass">:كلمة المرور</label><br><br>
+    <input type="password" id="pass" name="pass" required>
+	<span> [ A-Z a-z 0-9 special character]يجب ان تتكون 8 أحرف وتبدأ بحرف كبير وتتضمن</span>
+	<br><br><br>
+	<label for="phone">:رقم الهاتف المحمول</label><br><br>
+    <input type="tel" id="phone" name="ph"  pattern="[0]{1}[1]{1}[0-5]{1}[0-9]{8}" required>
+	<span>{1}[0]{2}[1]{3}[0-5]{8}[0-9]يجب ان يتكون من 11 رقم ويكون على هذا النمط</span>
+	<br><br><br>
+    <label for="adress">:العنوان</label><br><br>
+    <input type="text" id="adress" name="ad"  required><br><br>
+	<input type="radio" id="male" name="gender" value="male"required>
+    <label for="male">ذكر</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">انثى</label> <br><br>
+    <input type="submit" value="ارسال" style="width:60px;">
+  </fieldset>
+</form>
+
+
+</body>
+</html>
